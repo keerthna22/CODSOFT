@@ -1,0 +1,45 @@
+package randomnum;
+import java.util.*;
+public class student_gc {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int l[];
+		System.out.print("Enter number of subjects: ");
+		int snum=sc.nextInt();
+		l= new int[snum];
+		for(int n=1;n<snum;n++) {
+			System.out.println("Enter the mark of subject"+' '+n);
+			int mark=sc.nextInt();
+			l[n]=mark;
+			
+		}
+		int sum=0;
+		for(int n=0;n<l.length;n++) {
+			sum=sum+l[n];
+		}
+		int avg=(sum/snum);
+		System.out.println("The average is: "+avg);
+		System.out.println("The total mark is: "+sum);
+		if (avg>90 && avg<=100) {
+			System.out.println("Grade scored by the student is: "+'A');
+		}
+		else if(avg>=80 && avg<90) {
+			System.out.println("Grade scored by the student is: "+'B');
+		}
+		else if(avg>=70 && avg<80) {
+			System.out.println("Grade scored by the student is: "+'C');
+		}
+		else if(avg>=60 && avg<70) {
+			System.out.println("Grade scored by the student is: "+'D');
+		}
+		else if(avg>=50 && avg<60) {
+			System.out.println("Grade scored by the student is: "+'E');
+		}
+		else {
+			System.out.println("Grade scored by the student is: "+'F');
+		}
+		
+	}
+	
+
+}
