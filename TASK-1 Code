@@ -1,0 +1,32 @@
+// A random guessing game is created using java program, in which the game continue until
+//the user guesses the correct number
+//the no of turns of the user can be limited using a for loop if needed.
+
+package randomnum;
+import java.util.*;
+public class random {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		Random random = new Random();
+		boolean a=true;
+		int generated_num= random.nextInt(50);
+		while (a) {
+			System.out.println("Guess a number!");
+			int guess_num = sc.nextInt();	
+			if (generated_num<guess_num) {
+				System.out.println("Too High");
+				//System.out.println(generated_num);
+			}
+			else if(generated_num>guess_num) {
+				System.out.println("Too Low");
+				//System.out.println(generated_num);
+			}
+			else if(generated_num==guess_num) {
+				System.out.println("Correct guess");
+				a=!a;
+			}
+			
+		}
+
+	}
+}
